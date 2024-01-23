@@ -104,6 +104,7 @@ h1 {
   font-size: 14px;
   margin: 8px 0;
   padding: 16px 20px;
+  border-radius: 10px;
 }
 
 .section-playlist .section-playlist__content {
@@ -114,6 +115,7 @@ h1 {
 .section-playlist__content .text {
   padding-bottom: 14px;
   color: #fff;
+  font-family: "DM Sans", sans-serif;
 }
 
 .section-playlist__content .title {
@@ -167,4 +169,5 @@ h1 {
   width: 170px;
   margin: 8px;
   padding: 8px;
+  border-radius: 20px;
 }
