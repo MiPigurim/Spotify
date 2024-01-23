@@ -88,3 +88,7 @@ h1 {
   font-weight: 300;
   padding-right: 8px;
 }
+
+.library .library__content .fa-plus {
+  margin: 24px 10px;
+}
