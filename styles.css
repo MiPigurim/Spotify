@@ -115,3 +115,12 @@ h1 {
   padding-bottom: 14px;
   color: #fff;
 }
+
+.section-playlist__content .title {
+  font-weight: 700;
+}
+
+.section-playlist__content .subtitle {
+  font-weight: 500;
+  font-size: 12px;
+}
