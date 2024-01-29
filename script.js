@@ -1,35 +1,20 @@
-const resultArtist = document.getElementById("result-artist");
-const playlistContainer = document.getElementById("result-playlists");
-const searchInput = document.getElementById("search-input");
 
-function requestApi(searchTerm) {
-  fetch(`http://localhost:3000/artists?name_like=${searchTerm}`)
-    .then((response) => response.json())
-    .then((results) => displayResults(results));
-}
+//BOM DIA | BOA TARDE | BOA NOITE
 
-function displayResults(results) {
-  hidePlaylists();
-  const artistImage = document.getElementById("artist-img");
-  const artistName = document.getElementById("artist-name");
+// Obtém a referência do elemento com o ID "greeting"
+const greetingElement = document.getElementById("greeting");
 
-  results.forEach((element) => {
-    artistImage.src = element.urlImg;
-    artistName.innerText = element.name;
-  });
-  resultArtist.classList.remove("hidden");
-}
+// Obtém a hora atual do sistema
+const currentHour = new Date().getHours();
 
-function hidePlaylists() {
-  playlistContainer.classList.add("hidden");
-}
+// Forma mais simples
+const greetingMessage =
+  currentHour >= 5 && currentHour < 12
+    ? "Bom dia"
+    : currentHour >= 12 && currentHour < 18
+    ? "Boa tarde"
+    : "Boa noite";
 
-searchInput.addEventListener("input", function () {
-  const searchTerm = searchInput.value.toLowerCase();
-  if (searchTerm === "") {
-    resultArtist.classList.add("hidden");
-    playlistContainer.classList.remove("hidden");
-    return;
-  }
-  requestApi(searchTerm);
-});
+greetingElement.textContent = greetingMessage;
+
+
